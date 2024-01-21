@@ -1,0 +1,75 @@
+.nav{
+  display: flex;
+  justify-content: right;
+}
+
+.navbar {
+  position: fixed;
+  background-color: white;
+  padding: 10px;
+  max-width: 1100px; /* Set a reasonable max-width value for your design */
+  width: 100%;
+  
+}
+
+.wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu{
+  display: none;
+  color: violet;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+
+input {
+  padding: 5px;
+  margin-left: 5px ;
+  border: none;
+  border-radius: 3px;
+}
+
+.items {
+  display: flex;
+}
+
+.item {
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+/* Add hover effects or additional styling as needed */
+.item:hover {
+  color: #ffcc00; /* Example color on hover */
+}
+
+@media (max-width: 1340px) {
+  .navbar{
+    max-width: 100%;
+    transition: 2s;
+  }
+  #menu{
+    display: block;
+    padding-right: 20px;
+    padding-left: 5px;
+  }
+}
+
+@media(max-width:420px){
+  .search input{
+    display: none;
+  }
+  .navbar{
+    width: 100%;
+    transition: 2s;
+  }
+
+}

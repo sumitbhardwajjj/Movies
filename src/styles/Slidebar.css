@@ -1,0 +1,80 @@
+/* ../styles/SlideBar.css */
+
+.slidebar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px; /* Set the initial width of the sidebar */
+    overflow-x:hidden;
+    transition: 0.5s;
+  }
+  
+  
+  .slide {
+    text-align: left;
+  }
+  
+  .logo {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+  
+  .title {
+    color: gray;
+    font-weight: bold;
+  }
+
+  li{
+    color: gray;
+    padding: 5px 10px;
+    font-weight: 600;
+    list-style: none;
+  }
+
+  li:hover{
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #e4e1e1;
+  }
+  
+  .icon {
+    color: violet;
+    margin-right: 10px;
+  }
+  
+  span {
+    margin-left: 10px;
+  }
+
+  
+/* Custom scrollbar styles for webkit browsers */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  
+    border-radius: 10px;
+  }
+  
+
+  
+  /* Hamburger Menu for Small Screens */
+  @media (max-width: 1340px) {
+    .slidebar {
+      width: 0;
+    }
+
+    .side{
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px; /* Set the initial width of the sidebar */
+      background-color: white;
+      overflow-x:hidden;
+      transition: 0.5s;
+    }
+  }
+  

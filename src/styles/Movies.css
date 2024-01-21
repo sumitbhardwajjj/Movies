@@ -1,0 +1,37 @@
+.wrappe{
+    display: flex;
+    margin-top: 60px;
+    justify-content: right;
+  }
+  
+  .horizontal-scroll{
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    max-height: 400px;
+    max-width: 1100px;
+  
+  }
+  
+  .item-card {
+    display: inline-block;
+    margin-right: 20px;
+  
+  }
+  
+  .item-card img {
+    max-height: 400px;
+    width: 600px;
+    object-fit: cover; 
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 1340px) {
+    .horizontal-scroll{
+      max-width: 100%;
+      transition: 2s;
+    }
+  }
+  
+
+  

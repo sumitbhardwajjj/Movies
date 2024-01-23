@@ -12,85 +12,99 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import SettingsSystemDaydreamIcon from "@mui/icons-material/SettingsSystemDaydream";
+import ClearIcon from '@mui/icons-material/Clear';
+import {useSelector,useDispatch} from 'react-redux'
+import {toogleSLider} from '../components/Slice'
 
 const Slidebar = () => {
+
+  const dispatch = useDispatch();
+
+  const IsOpen = useSelector(state=>state.dash.isOpen)
+
+  const toogleMenu = () =>{
+    dispatch(toogleSLider())
+  }
+
   return (
-      <div className='slidebar'>
+      <div className={IsOpen ? "side" : "slidebar"}>
       <div className="slide">
-        <h2 className="logo">Dashboard</h2>
+       <div className='heading'>
+       <h2 className="logo">Dashboard</h2><ClearIcon id='clear' onClick={()=>toogleMenu(IsOpen)}/>
+       </div>
         <ul>
           <p className="title">MAIN</p>
-          <li>
+          <li className="lists">
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
         </ul>
         <ul>
           <p className="title">LISTS</p>
-          <li>
+          <li className="lists">
             <PersonOutlineIcon className="icon" />
             <span>Users</span>
           </li>
         </ul>
         <ul>
-          <li>
+          <li className='lists'>
             <StoreIcon className="icon" />
             <span>Products</span>
           </li>
         </ul>
         <ul>
-          <li>
+          <li className="lists">
             <CreditCardIcon className="icon" />
             <span>Orders</span>
           </li>
         </ul>
         <ul>
-          <li>
+          <li className="lists">
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
         </ul>
         <ul>
           <p className="title">USEFULL</p>
-          <li>
+          <li className="lists">
             <InsertChartIcon className="icon" />
             <span>Stats</span>
           </li>
         </ul>
         <ul>
-          <li>
+          <li className="lists">
             <NotificationsIcon className="icon" />
             <span>Notifications</span>
           </li>
         </ul>
         <ul>
           <p className="title">SERVICES</p>
-          <li>
+          <li className="lists">
             <SettingsSystemDaydreamIcon className="icon" />
             <span>System Health</span>
           </li>
         </ul>
         <ul>
-          <li>
+          <li className="lists">
             <PsychologyIcon className="icon" />
             <span>Logs</span>
           </li>
         </ul>
         <ul>
-          <li>
+          <li className="lists">
             <SettingsIcon className="icon" />
             <span>Setting</span>
           </li>
         </ul>
         <ul>
           <p className="title">USER</p>
-          <li>
+          <li className="lists">
             <AccountCircleIcon className="icon" />
             <span>Profile</span>
           </li>
         </ul>
         <ul>
-          <li>
+          <li className="lists">
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>

@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import '../styles/Navbar.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useDispatch,useSelector } from 'react-redux';
-import {toogledarkMode} from '../components/Slice'
+import {toogledarkMode,toogleSLider} from '../components/Slice'
 
 const Navbar = () => {
 
@@ -14,8 +14,14 @@ const Navbar = () => {
 
   const darkMode = useSelector(state=>state.dash.darkMode)
 
+  const IsOpen = useSelector(state=>state.dash.isOpen)
+
   const toogle = ()=>{
     dispatch(toogledarkMode())
+  }
+  
+  const toogleMenu = () =>{
+    dispatch(toogleSLider())
   }
 
 
@@ -24,7 +30,7 @@ const Navbar = () => {
        <div className='navbar'>
       <div className='wrapp'>
         <div className='search'>
-        <MenuIcon id='menu' />
+        <MenuIcon id='menu' onClick={()=>toogleMenu(IsOpen)} />
         <SearchIcon className='icon'/>
           <input type="text" placeholder='search' />
         </div>

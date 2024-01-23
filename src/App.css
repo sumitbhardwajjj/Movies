@@ -18,6 +18,16 @@
     background-color: #333
 }
 
-.dark .logo{
+.dark .side{
+    background-color: #333
+}
+
+.dark .heading{
     color: white;
 }
+
+.dark .lists:hover{
+    background-color: #444;
+}
+
+

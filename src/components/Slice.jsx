@@ -1,7 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit"
 
 const INITIAL_STATE = {
-    darkMode:false
+    darkMode:false,
+    isOpen:false
+
 }
 
 const Dashboard = createSlice({
@@ -10,10 +12,13 @@ const Dashboard = createSlice({
     reducers:{
         toogledarkMode:(state)=>{
             state.darkMode = !state.darkMode
+        },
+        toogleSLider:(state)=>{
+            state.isOpen = !state.isOpen
         }
     }
 })
 
-export const {toogledarkMode} = Dashboard.actions
+export const {toogledarkMode,toogleSLider} = Dashboard.actions
 
 export default Dashboard.reducer

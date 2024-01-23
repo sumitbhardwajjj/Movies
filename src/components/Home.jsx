@@ -1,14 +1,23 @@
-// HorizontalScroll.js
-
-import React from "react";
+import React,{useState} from "react";
 import "../styles/Home.css";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const HorizontalScroll = () => {
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    const newIndex = currentIndex + 1
+    setCurrentIndex(newIndex);
+  };
+
+  const maxIndex = 2;
+
   return (
      <div className="wrap">
       <div className="horizontal-scroll-container">
-      <div className="content">
+      <div className="content" style={{ transform: `translateX(-${currentIndex * 32}%)` }}>
         <div className="item">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWvYJs_91bg4gAYfcquyD49xNwPUDKsXL_xQ&usqp=CAU"
@@ -70,6 +79,9 @@ const HorizontalScroll = () => {
           />
         </div>
       </div>
+      <div style={{ display: currentIndex < maxIndex ? "block" : "none" }} onClick={handleNext}>
+          <ArrowForwardIosIcon className="right-arrow" />
+        </div>
     </div>
      </div>
   );

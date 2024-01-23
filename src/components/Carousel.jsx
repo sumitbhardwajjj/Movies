@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const data = [
   "https://img.freepik.com/free-photo/glowing-lines-human-heart-3d-shape-dark-background-generative-ai_191095-1435.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702166400&semt=ais",
@@ -10,32 +10,31 @@ const Carousel = () => {
   const [img, setimage] = useState(0);
 
   const handlePrev = () => {
-    setimage(!img ? data.length - 1 : img - 1);
-    if (img === 0) setimage(data.length - 1);
-    else setimage(img - 1);
+    setimage((img - 1 + data.length) % data.length);
   };
 
   const handleNext = () => {
     setimage((img + 1) % data.length);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      handleNext();
+    }, 2000); // Adjust the interval time (in milliseconds) as needed
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []); // Run the effect whenever 'img' changes
+
   return (
     <div>
       <button onClick={handlePrev}>Prev</button>
-      <img src={data[img]} alt="" style={{ height: "300px", width: "300px" }} />
+      <div style={{ maxWidth: "100%", height: "auto" }}>
+  <img src={data[img]} alt="" style={{ width: "100%", height: "100%" }} />
+</div>
+
       <button onClick={handleNext}>Next</button>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-        eligendi et totam natus error quos ad incidunt! Debitis, dolorum
-        obcaecati corrupti deserunt totam placeat repellendus asperiores sunt
-        quibusdam provident laudantium voluptatum, est quisquam! Porro
-        accusantium et repellendus ducimus eaque magnam dolore quas repudiandae
-        sit molestias, quam fugit, error iste praesentium assumenda numquam sed,
-        cumque accusamus? Voluptatibus quis vel numquam! Labore obcaecati
-        dolores, quam amet optio ducimus voluptatum voluptate repellendus enim
-        modi. Sunt ullam atque magni nisi, natus a illo vel ad ab labore velit
-        error aut possimus optio? Laborum, adipisci sed ea tenetur quod iste
-        pariatur illum sapiente molestiae corrupti.
-      </h1>
     </div>
   );
 };

@@ -28,20 +28,21 @@
   border-radius: 8px;
 }
 
-.right {
-  background-color: white;
+.left-arrow{
+  top: 100px;
+  left: 230px;
+  position: absolute;
+  color: white;
+  cursor: pointer;
 }
 
 .right-arrow {
   top: 100px;
   right: 0;
+  height: 100px;
   position: absolute;
-  padding: 8px;
-  border-radius: 50%;
-  background-color: white;
-  color: black; /* Add text color */
-  border: 1px solid #ccc; /* Add border for visibility */
-  cursor: pointer; /* Add cursor pointer for better user interaction */
+  color: white;
+  cursor: pointer; 
 }
 
 @media (max-width: 1340px) {

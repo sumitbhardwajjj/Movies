@@ -1,11 +1,17 @@
 import React,{useState} from "react";
 import "../styles/Home.css";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 
 const HorizontalScroll = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    const newIndex = currentIndex - 1
+    setCurrentIndex(newIndex);
+  }
 
   const handleNext = () => {
     const newIndex = currentIndex + 1
@@ -79,6 +85,9 @@ const HorizontalScroll = () => {
           />
         </div>
       </div>
+      <div style={{ display: currentIndex === maxIndex ? "block" : "none" }} onClick={handlePrev}>
+          <ArrowBackIosIcon className="left-arrow" />
+        </div>
       <div style={{ display: currentIndex < maxIndex ? "block" : "none" }} onClick={handleNext}>
           <ArrowForwardIosIcon className="right-arrow" />
         </div>

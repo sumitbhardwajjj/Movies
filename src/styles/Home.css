@@ -2,8 +2,9 @@
   display: flex;
   margin-top: 10px;
   position: relative;
-  justify-content: flex-end; /* Updated this line */
+  justify-content: flex-end;
   z-index: 1;
+  transition: justify-content 2s; /* Added transition for flex properties */
 }
 
 .horizontal-scroll-container {
@@ -11,10 +12,11 @@
   white-space: nowrap;
   padding: 10px;
   max-width: 1100px;
+  transition: max-width 2s; /* Added transition for max-width */
 }
 
-.content{
-  transition: 2s;
+.content {
+  transition: all 2s; /* Changed transition to apply to all properties */
 }
 
 .item {
@@ -28,9 +30,10 @@
   border-radius: 8px;
 }
 
-.left-arrow{
+.left-arrow {
+  z-index: 2;
   top: 100px;
-  left: 230px;
+  left: 310px;
   position: absolute;
   color: white;
   cursor: pointer;
@@ -42,12 +45,23 @@
   height: 100px;
   position: absolute;
   color: white;
-  cursor: pointer; 
+  cursor: pointer;
 }
+
+/* Custom scrollbar styles for WebKit browsers */
+.horizontal-scroll-container::-webkit-scrollbar {
+  width: 0; /* Width of the scrollbar */
+}
+
+
 
 @media (max-width: 1340px) {
   .horizontal-scroll-container {
     max-width: 100%;
-    transition: 2s;
+  }
+  .left-arrow {
+    left: 0;
   }
 }
+
+

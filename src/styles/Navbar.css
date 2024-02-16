@@ -16,27 +16,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
   width: 100%;
 }
 
 #menu{
   display: none;
   color: violet;
+  margin-left: 30px;
+}
+
+.search-icon{
+  color: violet; 
+}
+
+.searc{
+  display: flex;
+  align-items: center;
 }
 
 .search {
   display: flex;
   align-items: center;
-  margin: 0px 20px;
+  padding: 3px 50px 3px 10px;
+  border-radius: 5px;
 }
 
 
 input {
   padding: 5px;
-  margin-left: 5px ;
   border: none;
   border-radius: 3px;
+}
+
+input:focus{
+  outline: none;
 }
 
 .items {
@@ -46,8 +59,20 @@ input {
 .item {
   padding-left: 5px;
   cursor: pointer;
+  position: relative;
 }
 
+.icon3{
+  top: -7px;
+  right: 8px;
+  color: white;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  background-color: red;
+  position: absolute;
+  border-radius: 50%
+}
 /* Add hover effects or additional styling as needed */
 .item:hover {
   color: #ffcc00; /* Example color on hover */
@@ -65,7 +90,7 @@ input {
   }
 }
 
-@media(max-width:420px){
+@media(max-width:500px){
   .search input{
     display: none;
   }
@@ -75,3 +100,4 @@ input {
   }
 
 }
+

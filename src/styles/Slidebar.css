@@ -8,6 +8,7 @@
     width: 220px; /* Set the initial width of the sidebar */
     overflow-x:auto;
     transition: 0.5s;
+    z-index: 2;
   }
   
   
@@ -61,15 +62,21 @@
   }
 
   
-/* Custom scrollbar styles for webkit browsers */
-::-webkit-scrollbar {
-    width: 3px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-  
-    border-radius: 10px;
-  }
+/* Custom scrollbar styles for WebKit browsers */
+.slidebar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+
+}
+
+.slidebar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.slidebar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the handle on hover */
+}
+
   
 
   

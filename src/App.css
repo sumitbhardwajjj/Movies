@@ -5,21 +5,41 @@
 
 .dark{
     transition: 2s;
-    background-color: #333;
+    background-color: #0f1127;
 }
 
 .dark .navbar {
     transition: 2s;
-    background-color: #333
+    background-color: #0f1127;
 }
+
+.dark .search{
+    transition: 2s;
+    background-color: #2b2d50
+}
+
+ .dark .slidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  
+  }
+  
+  .dark .slidebar::-webkit-scrollbar-thumb {
+    background: #333657;
+  }
+  
+  /* Handle on hover */
+  .dark .slidebar::-webkit-scrollbar-thumb:hover {
+    background: #282c57; /* Color of the handle on hover */
+  }
 
 .dark .navbar input {
     transition: 2s;
-    background-color: #333
+    color: white;
+    background-color: #2b2d50
 }
 
 .dark .side{
-    background-color: #333
+    background-color: #151730
 }
 
 .dark .heading{
@@ -27,7 +47,14 @@
 }
 
 .dark .lists:hover{
-    background-color: #444;
+    background-color: #2e304e;
 }
+
+@media(max-width:500px){
+    .dark .search{
+      background-color:  #0f1127;
+    }
+  
+  }
 
 

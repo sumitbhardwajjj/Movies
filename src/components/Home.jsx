@@ -23,6 +23,9 @@ const HorizontalScroll = () => {
   return (
      <div className="wrap">
       <div className="horizontal-scroll-container">
+      <div style={{ display: currentIndex === maxIndex ? "block" : "none" }} onClick={handlePrev}>
+          <ArrowBackIosIcon className="left-arrow" />
+        </div>
       <div className="content" style={{ transform: `translateX(-${currentIndex * 32}%)` }}>
         <div className="item">
           <img
@@ -84,10 +87,9 @@ const HorizontalScroll = () => {
             alt=""
           />
         </div>
+      
       </div>
-      <div style={{ display: currentIndex === maxIndex ? "block" : "none" }} onClick={handlePrev}>
-          <ArrowBackIosIcon className="left-arrow" />
-        </div>
+      
       <div style={{ display: currentIndex < maxIndex ? "block" : "none" }} onClick={handleNext}>
           <ArrowForwardIosIcon className="right-arrow" />
         </div>

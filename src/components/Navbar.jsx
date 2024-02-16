@@ -29,10 +29,12 @@ const Navbar = () => {
     <nav className='nav'>
        <div className='navbar'>
       <div className='wrapp'>
-        <div className='search'>
+        <div className='searc'>
         <MenuIcon id='menu' onClick={()=>toogleMenu(IsOpen)} />
-        <SearchIcon className='icon'/>
+        <div className='search'>
+        <SearchIcon className='search-icon'/>
           <input type="text" placeholder='search' />
+        </div>
         </div>
         <div className='items'>
           <div className='item'>
@@ -40,6 +42,7 @@ const Navbar = () => {
           </div>
           <div className='item'>
             <NotificationsIcon className='icon'/>
+            <div className='icon3'>3</div>
           </div>
           <div className='item'>
             <ChatBubbleOutlineIcon className='icon'/>

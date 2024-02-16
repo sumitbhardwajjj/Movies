@@ -1,9 +1,11 @@
 .nav{
   display: flex;
   justify-content: right;
+
 }
 
 .navbar {
+  z-index: 2;
   position: fixed;
   background-color: white;
   padding: 10px;

@@ -1,7 +1,6 @@
 .wrappe{
     display: flex;
-    margin-top: 60px;
-    margin-right: 60px;
+    margin: 60px 60px 40px;
     justify-content: right;
   
   }

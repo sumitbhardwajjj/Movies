@@ -6,6 +6,7 @@
 .dark{
     transition: 2s;
     background-color: #0f1127;
+    height: 1000vh;
 }
 
 .dark .navbar {

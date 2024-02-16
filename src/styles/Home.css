@@ -1,4 +1,5 @@
 .wrap {
+  height: 250px;
   display: flex;
   margin-top: 10px;
   position: relative;
@@ -8,6 +9,7 @@
 }
 
 .horizontal-scroll-container {
+  height: 100%;
   overflow-x: auto;
   white-space: nowrap;
   padding: 10px;
@@ -33,7 +35,7 @@
 .left-arrow {
   z-index: 2;
   top: 100px;
-  left: 310px;
+  left: 230px;
   position: absolute;
   color: white;
   cursor: pointer;

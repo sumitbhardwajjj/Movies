@@ -8,7 +8,7 @@
     width: 220px; /* Set the initial width of the sidebar */
     overflow-x:auto;
     transition: 0.5s;
-    z-index: 2;
+    z-index: 3;
   }
   
   
